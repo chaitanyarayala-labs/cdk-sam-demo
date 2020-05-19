@@ -1,8 +1,10 @@
 # import json
+import logging
 
 def lambda_handler(event, context):
   message = event.get('message', 'default mess')
-  print('Debug: event ' + message)
+  logging.info('Debug: event ' + message)
+  
   return {
     "headers": {
       "lala": "haha"
